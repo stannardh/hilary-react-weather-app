@@ -30,6 +30,7 @@ body {
   max-width: 200px;
   font-family: monospace;
   background-color: #ffffff;
+  margin-left: 50px;
 }
 
 #search-button:hover {
