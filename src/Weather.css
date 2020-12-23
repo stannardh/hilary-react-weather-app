@@ -22,7 +22,6 @@ body {
 #city-search:hover {
   background-color: rgba(74, 182, 167, 0.911);
 }
-
 #search-button {
   border: rgba(77, 211, 193, 0.959) solid 5px;
   border-radius: 8px;
@@ -41,7 +40,7 @@ body {
   border: #ffa62b solid 5px;
   position: relative;
   left: 900px;
-  bottom: 10px;
+  top: 50px;
   border-radius: 8px;
   padding: 10px;
   min-width: 100px;
@@ -104,10 +103,6 @@ a {
   max-width: 540px;
 }
 
-.card-body {
-  padding: 30px;
-}
-
 .card-text {
   margin-top: 20px;
   font-size: 20px;
@@ -137,12 +132,18 @@ a {
 }
 .weatherDescription {
   color: #db6400;
-  font-size: 15px;
+  font-size: 20px;
   font-family: monospace;
   list-style: none;
   margin-left: 30px;
   margin-top: 30px;
-  text-align: center;
+  text-align: justify;
+  line-height: 20px;
+  padding: 0;
+}
+
+#description::first-letter {
+  text-transform: capitalize;
 }
 
 img {
@@ -157,6 +158,7 @@ img {
   font-size: 20px;
   font-family: monospace;
   display: block;
+  margin-top: 20px;
 }
 
 #description::first-letter {
