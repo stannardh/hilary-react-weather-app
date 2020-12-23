@@ -17,6 +17,7 @@ body {
   min-width: 400px;
   max-width: 500px;
   font-family: monospace;
+  margin-left: 50px;
 }
 
 #city-search:hover {
@@ -30,7 +31,7 @@ body {
   max-width: 200px;
   font-family: monospace;
   background-color: #ffffff;
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 #search-button:hover {
@@ -168,4 +169,8 @@ img {
 
 small {
   font-size: 12px;
+}
+
+footer {
+  margin-top: 5px;
 }
