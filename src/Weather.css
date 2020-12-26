@@ -18,6 +18,7 @@ body {
   max-width: 500px;
   font-family: monospace;
   margin-left: 50px;
+  font-size: 15px;
 }
 
 #city-search:hover {
@@ -32,6 +33,7 @@ body {
   font-family: monospace;
   background-color: #ffffff;
   margin-left: 20px;
+  font-size: 15px;
 }
 
 #search-button:hover {
@@ -102,7 +104,7 @@ a {
   display: block;
   margin: 0 auto;
   width: 800px;
-  max-width: 540px;
+  max-width: 800x;
 }
 
 .card-text {
@@ -137,7 +139,7 @@ a {
   font-size: 20px;
   font-family: monospace;
   list-style: none;
-  margin-left: 30px;
+  margin-left: 80px;
   margin-top: 30px;
   text-align: justify;
   line-height: 20px;

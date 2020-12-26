@@ -56,7 +56,8 @@ export default function Search(props) {
             <div className="card-body">
               <h5 id="date">{weather.date}</h5>
               <h5 id="city">{city}</h5>
-              <div className="clearfix weather-temperature">
+              <div id = "weatherData"></div>
+                <div className="clearfix weather-temperature">
                 <img src="" alt="" className="float-left" id="icon" />
                 <strong id="temperature">Temperature: {Math.round(weather.temperatureCelsius)}°C</strong>
                 <span className="units">
@@ -68,14 +69,16 @@ export default function Search(props) {
                   °F
                   </a>
                 </span>
-              </div>
+                
 
-              <div className="col-9">
-                <ul className="weatherDescription">
+                <div className="col-9">
+                  <ul className="weatherDescription">
                   <li id="humidity">Humidity: {weather.humidity}%</li>
                   <li id="wind">Wind Speed: {Math.round(weather.wind)} km/h</li>
-                </ul>
+                  </ul>
+              
               </div>
+            </div>
             </div>
           </div>
         </div>
