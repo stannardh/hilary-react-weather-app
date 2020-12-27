@@ -6,35 +6,30 @@ import Footer from "./Footer"
 
 
 export default function Search(props) {
-  let [city, setCity] = useState("");
-  let [weather, setWeather] = useState({});
+  const [weather, setWeather] = useState({ready: false});
   
 
   function showWeather(response) {
+    
     setWeather({
+      ready:true,
       temperatureCelsius: response.data.main.temp,
       temperatureFahrenheit: ((response.data.main.temp)* 9) / 5 + 32,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      description: response.data.weather[0].description
+      description: response.data.weather[0].description,
+      city: response.data.name,
     });
-  }
+   
+  };
 
-   function showForecast(event) {
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8282d3ebf715726bc4f5fc0059ed8b10&units=metric`;
-    axios.get(url).then(showWeather);
-    event.preventDefault();
-  
-  }
-
-  function updateCity(event) {
-    setCity(event.target.value);
-  }
-  return (
+  if (weather.ready){
+   
+    return (
     <div id = "search-city">
-      <form onSubmit={showForecast}>
-        <input type="search" placeholder="Search" id="city-search" onChange={updateCity} />
+      <form>
+        <input type="search" placeholder="Search" id="city-search" />
         <input type="submit" id= "search-button" value="Search" />
       </form>
 
@@ -55,7 +50,7 @@ export default function Search(props) {
           <div className="col-md-8">
             <div className="card-body">
               <h5 id="date">Sunday 6th December, 16:00</h5>
-              <h5 id="city">{city}</h5>
+              <h5 id="city">{weather.city}</h5>
               <div id = "weatherData"></div>
                 <div className="clearfix weather-temperature">
                 <img src="" alt="" className="float-left" id="icon" />
@@ -85,4 +80,17 @@ export default function Search(props) {
         </div>
         <div><Footer/></div>
         </div>
-      </div>);}
+      </div>);
+      } 
+      
+  else  {
+    let apiKey = "8282d3ebf715726bc4f5fc0059ed8b10";
+    let city = "London"
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(showWeather);
+    
+
+    return "Loading..."
+  
+  }}
