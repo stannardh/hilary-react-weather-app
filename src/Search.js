@@ -54,7 +54,7 @@ export default function Search(props) {
           </div>
           <div className="col-md-8">
             <div className="card-body">
-              <h5 id="date">{weather.date}</h5>
+              <h5 id="date">Sunday 6th December</h5>
               <h5 id="city">{city}</h5>
               <div id = "weatherData"></div>
                 <div className="clearfix weather-temperature">
