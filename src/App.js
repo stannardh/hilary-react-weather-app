@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div>
       <LocationButton />
-      <Search />
+      <Search defaultCity= "Madrid"/>
     </div>
   );
 }
