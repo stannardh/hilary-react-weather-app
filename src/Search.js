@@ -1,9 +1,8 @@
 import React,{useState} from "react";
 import "./Weather.css";
 import axios from "axios";
-import Footer from "./Footer";
-import FormattedDate from "./FormattedDate";
-import LoaderSpinner from "./LoaderSpinner"
+import LoaderSpinner from "./LoaderSpinner";
+import WeatherInfo from "./WeatherInfo"
 
 
 export default function Search() {
@@ -30,59 +29,14 @@ export default function Search() {
    
     return (
     <div id = "search-city">
-      <form>
+      <form onSubmit={handleSubmit}>
         <input type="search" placeholder="Search" id="city-search" />
         <input type="submit" id= "search-button" value="Search" />
       </form>
+      
 
-      <div className="current">
-        <div className="currentweather">
-        <div className="row no-gutters">
-          <div className="col-md-4">
-            <img src={weatherData.icon} alt={weatherData.description} />
-            <div className="row" id="description">
-              {weatherData.description}
-              <p className="card-text">
-                <small className="text-muted" id="lastUpdate">
-                  Last updated 3 mins ago
-                </small>
-              </p>
-            </div>
-          </div>
-          <div className="col-md-8">
-            <div className="card-body">
-              <h5 id="date"><FormattedDate date={weatherData.date}/></h5>
-              <h5 id="city">{weatherData.city}</h5>
-              <div id = "weatherData"></div>
-                <div className="clearfix weather-temperature">
-                <img src="" alt="" className="float-left" id="icon" />
-                <strong id="temperature">Temperature: {Math.round(weatherData.temperatureCelsius)}°C</strong>
-                <span className="units">
-                  <a href="/" id="celsius-link" className="active">
-                    °C
-                  </a>{" "}
-                  |{" "}
-                  <a href="/" id="fahrenheit-link">
-                  °F
-                  </a>
-                </span>
-                
-
-                <div className="col-9">
-                  <ul className="weatherDescription">
-                  <li id="humidity">Humidity: {weatherData.humidity}%</li>
-                  <li id="wind">Wind Speed: {Math.round(weatherData.wind)} km/h</li>
-                  </ul>
-              
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div><Footer/></div>
-        </div>
-      </div>);
+      <WeatherInfo data = {weatherData}/></div>
+    );
       } 
       
   else  {
