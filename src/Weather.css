@@ -180,3 +180,7 @@ small {
 footer {
   margin-top: 5px;
 }
+
+#spinner {
+  margin: 50%;
+}

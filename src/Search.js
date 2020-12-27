@@ -1,18 +1,19 @@
 import React,{useState} from "react";
 import "./Weather.css";
-import axios from "axios"
-import Footer from "./Footer"
+import axios from "axios";
+import Footer from "./Footer";
+import FormattedDate from "./FormattedDate";
+import LoaderSpinner from "./LoaderSpinner"
 
 
-
-export default function Search(props) {
-  const [weather, setWeather] = useState({ready: false});
+export default function Search() {
+  const [weatherData, setWeatherData] = useState({ready: false});
   
 
   function showWeather(response) {
-    
-    setWeather({
+    setWeatherData({
       ready:true,
+      
       temperatureCelsius: response.data.main.temp,
       temperatureFahrenheit: ((response.data.main.temp)* 9) / 5 + 32,
       wind: response.data.wind.speed,
@@ -20,11 +21,12 @@ export default function Search(props) {
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000) 
     });
    
   };
 
-  if (weather.ready){
+  if (weatherData.ready){
    
     return (
     <div id = "search-city">
@@ -37,9 +39,9 @@ export default function Search(props) {
         <div className="currentweather">
         <div className="row no-gutters">
           <div className="col-md-4">
-            <img src={weather.icon} alt={weather.description} />
+            <img src={weatherData.icon} alt={weatherData.description} />
             <div className="row" id="description">
-              {weather.description}
+              {weatherData.description}
               <p className="card-text">
                 <small className="text-muted" id="lastUpdate">
                   Last updated 3 mins ago
@@ -49,12 +51,12 @@ export default function Search(props) {
           </div>
           <div className="col-md-8">
             <div className="card-body">
-              <h5 id="date">Sunday 6th December, 16:00</h5>
-              <h5 id="city">{weather.city}</h5>
+              <h5 id="date"><FormattedDate date={weatherData.date}/></h5>
+              <h5 id="city">{weatherData.city}</h5>
               <div id = "weatherData"></div>
                 <div className="clearfix weather-temperature">
                 <img src="" alt="" className="float-left" id="icon" />
-                <strong id="temperature">Temperature: {Math.round(weather.temperatureCelsius)}°C</strong>
+                <strong id="temperature">Temperature: {Math.round(weatherData.temperatureCelsius)}°C</strong>
                 <span className="units">
                   <a href="/" id="celsius-link" className="active">
                     °C
@@ -68,8 +70,8 @@ export default function Search(props) {
 
                 <div className="col-9">
                   <ul className="weatherDescription">
-                  <li id="humidity">Humidity: {weather.humidity}%</li>
-                  <li id="wind">Wind Speed: {Math.round(weather.wind)} km/h</li>
+                  <li id="humidity">Humidity: {weatherData.humidity}%</li>
+                  <li id="wind">Wind Speed: {Math.round(weatherData.wind)} km/h</li>
                   </ul>
               
               </div>
@@ -84,13 +86,13 @@ export default function Search(props) {
       } 
       
   else  {
-    let apiKey = "8282d3ebf715726bc4f5fc0059ed8b10";
+    let apiKey = "ecdd330b9998a88e5537e325e879fa9c";
     let city = "London"
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(showWeather);
     
 
-    return "Loading..."
+    return <div id="spinner"><LoaderSpinner/></div>
   
   }}
