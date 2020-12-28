@@ -91,9 +91,9 @@ body {
 }
 
 .currentweather {
-  border: rgba(74, 182, 167, 0.911) solid 5px;
+  border: rgba(108, 184, 173, 0.911) solid 5px;
   border-radius: 8px;
-  background-color: rgba(31, 179, 156, 0.137);
+  background-color: rgb(172, 224, 217);
   display: block;
   margin: 0 auto;
   width: 800px;
@@ -154,7 +154,7 @@ img {
 }
 
 #description {
-  color: #ffa62b;
+  color: #eb9011;
   font-size: 20px;
   font-family: monospace;
   font-weight: bold;
@@ -174,7 +174,8 @@ footer #footerLink {
   float: right;
   margin-top: 5px;
   margin-bottom: 5px;
-  color: #ffa62b;
+  font-weight: 500;
+  color: #eb9011;
   text-emphasis: none;
 }
 
