@@ -1,13 +1,13 @@
 import React from "react";
-import Footer from "./Footer";
 import FormattedDate from "./FormattedDate";
+import Footer from "./Footer"
 
 export default function WeatherInfo(props){
 
   return (
   <div className= "weatherInfo">
     <div className="current">
-        <div className="currentweather">
+      <div className="currentweather">
         <div className="row no-gutters">
           <div className="col-md-4">
             <img src={props.data.icon} alt={props.data.description} />
@@ -27,7 +27,7 @@ export default function WeatherInfo(props){
               <div id = "weatherData"></div>
                 <div className="clearfix weather-temperature">
                 <img src="" alt="" className="float-left" id="icon" />
-                <strong id="temperature">Temperature: {Math.round(props.data.temperatureCelsius)}°C</strong>
+                <strong id="temperature">Temperature: {Math.round(props.data.temperatureCelsius)}</strong>
                 <span className="units">
                   <a href="/" id="celsius-link" className="active">
                     °C
@@ -50,8 +50,11 @@ export default function WeatherInfo(props){
             </div>
           </div>
         </div>
+        
         </div>
         <div><Footer/></div>
-        </div>
+        
+    </div>
+        
   </div>)
 }

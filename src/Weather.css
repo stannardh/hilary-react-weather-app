@@ -17,12 +17,12 @@ body {
   min-width: 400px;
   max-width: 500px;
   font-family: monospace;
-  margin-left: 50px;
+  margin-left: 10px;
   font-size: 20px;
 }
 
 #city-search:hover {
-  background-color: rgba(74, 182, 167, 0.911);
+  background-color: rgba(74, 138, 163, 0.61);
 }
 #search-button {
   border: rgba(77, 211, 193, 0.959) solid 5px;
@@ -32,21 +32,21 @@ body {
   max-width: 200px;
   font-family: monospace;
   background-color: #ffffff;
-  margin-top: 30px;
-  margin-left: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
   font-size: 20px;
 }
 
 #search-button:hover {
-  background-color: rgba(74, 182, 167, 0.911);
+  background-color: rgba(77, 211, 193, 0.582);
 }
 
 #locationButton {
   border: #ffa62b solid 5px;
   display: flexbox;
   float: right;
-  margin-right: 80px;
-  margin-top: 50px;
+  margin-right: 10px;
+  margin-top: 40px;
   left: 900px;
   top: 50px;
   border-radius: 8px;
@@ -59,7 +59,7 @@ body {
 }
 
 #locationButton:hover {
-  background-color: rgba(74, 182, 167, 0.911);
+  background-color: #ffa72b8e;
 }
 
 .current {
@@ -98,21 +98,19 @@ body {
   font-size: 20px;
   display: inline;
 }
-a {
-  color: rgba(12, 109, 96);
-}
 
 .currentweather {
   border: rgba(74, 182, 167, 0.911) solid 5px;
   border-radius: 8px;
+  background-color: rgba(31, 179, 156, 0.137);
   display: block;
   margin: 0 auto;
-  width: 800px;
+  width: 700px;
   max-width: 800x;
 }
 
 .card-text {
-  margin-top: 20px;
+  margin-top: 80px;
   font-size: 20px;
   font-family: monospace;
   display: block;
@@ -140,6 +138,7 @@ a {
 }
 .weatherDescription {
   color: #db6400;
+  font-weight: bold;
   font-size: 20px;
   font-family: monospace;
   list-style: none;
@@ -148,6 +147,10 @@ a {
   text-align: justify;
   line-height: 20px;
   padding: 0;
+}
+
+.card-body {
+  padding-bottom: 10px;
 }
 
 #description::first-letter {
@@ -165,6 +168,7 @@ img {
   color: #ffa62b;
   font-size: 20px;
   font-family: monospace;
+  font-weight: bold;
   display: block;
   margin-top: 20px;
 }
@@ -177,10 +181,15 @@ small {
   font-size: 12px;
 }
 
-footer {
-  margin-top: 5px;
+footer #footerLink {
+  float: right;
+  color: #ffa62b;
+  text-emphasis: none;
 }
 
+#footerLink:hover {
+  text-decoration: none;
+}
 #spinner {
   margin: 50%;
 }

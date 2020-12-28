@@ -23,6 +23,7 @@ export default function Search(props) {
     });
    
   };
+ 
 
   function Search(){
     let apiKey = "ecdd330b9998a88e5537e325e879fa9c";
@@ -60,3 +61,5 @@ export default function Search(props) {
     return <div>Loading...</div>
   
   }}
+
+  
