@@ -90,14 +90,7 @@ body {
   font-family: monospace;
 }
 
-#celsius-link {
-  color: rgba(12, 109, 96);
-  font-size: 20px;
-  font-family: monospace;
-  text-emphasis: none;
-}
-
-#fahrenheit-link {
+.units a {
   color: rgba(12, 109, 96);
   font-size: 20px;
   font-family: monospace;
@@ -110,8 +103,7 @@ body {
   background-color: rgba(31, 179, 156, 0.137);
   display: block;
   margin: 0 auto;
-  width: 700px;
-  max-width: 800x;
+  width: 800px;
 }
 
 .card-text {
@@ -165,7 +157,6 @@ body {
 img {
   display: block;
   line-height: normal;
-  size: 200px;
   margin: auto;
 }
 
@@ -188,6 +179,8 @@ small {
 
 footer #footerLink {
   float: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
   color: #ffa62b;
   text-emphasis: none;
 }

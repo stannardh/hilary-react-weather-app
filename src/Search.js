@@ -12,8 +12,7 @@ export default function Search(props) {
     setWeatherData({
       ready:true,
       
-      temperatureCelsius: response.data.main.temp,
-      temperatureFahrenheit: ((response.data.main.temp)* 9) / 5 + 32,
+      temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
