@@ -58,7 +58,7 @@ export default function Search(props) {
       
   else  {
     Search()
-    return <div><LoaderSpinner /></div>
+    return <div><LoaderSpinner/></div>
   
   }}
 

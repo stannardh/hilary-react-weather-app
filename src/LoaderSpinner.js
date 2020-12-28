@@ -1,15 +1,14 @@
-import React from "react"
+import React from "react";
+import Loader from 'react-loader-spinner'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 export default function LoaderSpinner(){
-return(
-      <LoaderSpinner
+    return(
+      <Loader
          type="TailSpin"
-         color="#ffa62b"
-         height={100}
-         width={100}
+         color="#12, 109, 96"
+         height={200}
+         width={200}
          timeout={5000}
  
-      />
-     );
-}
+      />)}
