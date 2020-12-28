@@ -90,13 +90,18 @@ body {
   font-family: monospace;
 }
 
-.celsius-temp {
+#celsius-link {
+  color: rgba(12, 109, 96);
   font-size: 20px;
-  display: inline;
+  font-family: monospace;
+  text-emphasis: none;
 }
-.farenheit-temp {
+
+#fahrenheit-link {
+  color: rgba(12, 109, 96);
   font-size: 20px;
-  display: inline;
+  font-family: monospace;
+  text-emphasis: none;
 }
 
 .currentweather {
