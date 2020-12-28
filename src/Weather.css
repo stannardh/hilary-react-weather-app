@@ -17,7 +17,7 @@ body {
   min-width: 400px;
   max-width: 500px;
   font-family: monospace;
-  margin-left: 10px;
+  margin: 0 auto;
   font-size: 20px;
 }
 
@@ -39,27 +39,6 @@ body {
 
 #search-button:hover {
   background-color: rgba(77, 211, 193, 0.582);
-}
-
-#locationButton {
-  border: #ffa62b solid 5px;
-  display: flexbox;
-  float: right;
-  margin-right: 10px;
-  margin-top: 40px;
-  left: 900px;
-  top: 50px;
-  border-radius: 8px;
-  padding: 10px;
-  min-width: 100px;
-  max-width: 200px;
-  font-family: monospace;
-  background-color: #ffffff;
-  font-size: 15px;
-}
-
-#locationButton:hover {
-  background-color: #ffa72b8e;
 }
 
 .current {
