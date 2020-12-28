@@ -90,13 +90,6 @@ body {
   font-family: monospace;
 }
 
-.units a {
-  color: rgba(12, 109, 96);
-  font-size: 20px;
-  font-family: monospace;
-  text-emphasis: none;
-}
-
 .currentweather {
   border: rgba(74, 182, 167, 0.911) solid 5px;
   border-radius: 8px;

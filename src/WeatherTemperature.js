@@ -16,6 +16,7 @@ function fahrenheit(){
 function showFahrenheit(event){
     event.preventDefault();
     setUnit("fahrenheit")
+
 }
 
 
@@ -27,7 +28,7 @@ function showFahrenheit(event){
                 <span className="units">
                   °C
                   |{" "}
-                  <a href="/" onClick={showFahrenheit}>
+                  <a href="/" onClick={showFahrenheit} id = "clickFahrenheit" className = "active">
                   °F
                   </a>
                 </span>
@@ -37,7 +38,7 @@ return (
     <div className = "WeatherTemperature">
         <span id="temperature">Temperature: {Math.round(fahrenheit())}</span>
                 <span className="units">
-                  <a href="/" onClick={showCelsius}>
+                  <a href="/" id = "tempUnits" onClick={showCelsius}>
                     °C
                   </a>{" "}
                   |
