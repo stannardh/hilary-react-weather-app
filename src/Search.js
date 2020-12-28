@@ -1,7 +1,8 @@
 import React,{useState} from "react";
 import "./Weather.css";
 import axios from "axios";
-import WeatherInfo from "./WeatherInfo"
+import WeatherInfo from "./WeatherInfo";
+import LoaderSpinner from "./LoaderSpinner"
 
 
 export default function Search(props) {
@@ -57,7 +58,7 @@ export default function Search(props) {
       
   else  {
     Search()
-    return <div>Loading...</div>
+    return <div><LoaderSpinner /></div>
   
   }}
 
