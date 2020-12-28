@@ -74,14 +74,15 @@ body {
 
 #date {
   color: rgba(12, 109, 96);
-  font-size: 25px;
+  font-size: 30px;
   font-family: monospace;
 }
 
 #city {
   color: rgba(12, 109, 96);
-  font-size: 30px;
+  font-size: 40px;
   font-family: monospace;
+  font-weight: 600;
 }
 
 #temperature {
@@ -129,13 +130,13 @@ body {
 .weatherDescription {
   color: #db6400;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
   font-family: monospace;
   list-style: none;
   margin-left: 80px;
   margin-top: 30px;
   text-align: justify;
-  line-height: 20px;
+  line-height: 30px;
   padding: 0;
 }
 
@@ -155,7 +156,7 @@ img {
 
 #description {
   color: #eb9011;
-  font-size: 20px;
+  font-size: 25px;
   font-family: monospace;
   font-weight: bold;
   display: block;
@@ -184,4 +185,20 @@ footer #footerLink {
 }
 #spinner {
   margin: 50%;
+}
+
+.active {
+  color: rgba(12, 109, 96);
+  font-size: 30px;
+  font-family: monospace;
+}
+
+#tempUnits {
+  color: rgba(12, 109, 96);
+  font-size: 15px;
+  font-family: monospace;
+}
+
+#tempUnits:hover {
+  text-decoration: none;
 }
